@@ -33,64 +33,71 @@ Anaconda - Python 3.7
 ### Register No:212220230060
 
 ## i) Write the frame as JPG file
-videoCaptureObject = cv2.VideoCapture(0)
-ret,frame = videoCaptureObject.read()
-cv2.imwrite("NewPicture.jpg",frame)
+import cv2
+import numpy as np
+cap=cv2.VideoCapture(0)
+ret,frame=cap.read()
+cv2.imwrite("live.jpg",frame) 
+cap.release() 
+cv2.destroyAllWindows()
+
 
 
 ## ii) Display the video
-import cv2
-import numpy as np
-cap = cv2.VideoCapture(0)
-while True:
-    ret, frame = cap.read()
-    cv2.imshow("NewPicture",frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-videoCaptureObject.release()
+import cv2 
+import numpy as np 
+cap=cv2.VideoCapture(0) 
+while True: 
+    ret,frame=cap.read()
+    cv2.imshow('frame',frame)
+    if cv2.waitKey(1)==ord('q'): 
+        break 
+cap.release()
 cv2.destroyAllWindows()
 
 
 
 ## iii) Display the video by resizing the window
-import cv2
-import numpy as np
-cap = cv2.VideoCapture(0)
-while True:
-    ret, frame = cap.read()
-    width = int(cap.get(3))
-    height = int(cap.get(4))
-    image = np.zeros(frame.shape, np.uint8)
-    smaller_frame = cv2.resize(frame, (0,0), fx = 0.5, fy=0.5)
-    image[:height//2, :width//2] = smaller_frame
-    image[height//2:, :width//2] = smaller_frame
-    image[:height//2, width//2:] = smaller_frame    
-    image[height//2:, width//2:] = smaller_frame
-    image[:height//2, :width//2] = cv2.rotate(smaller_frame,cv2.cv2.ROTATE_180)
-    cv2.imshow("NewPicture.jpg",image)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-videoCaptureObject.release()
+import cv2 
+import numpy as np 
+cap=cv2.VideoCapture(0) 
+while True: 
+    ret,frame=cap.read()
+    width=int(cap.get(3)) 
+    height=int(cap.get(4)) 
+    image=np.zeros(frame.shape,np.uint8)
+    smaller_frame=cv2.resize(frame,(0,0),fx=0.5,fy=0.5)
+    image[:height//2,:width//2]=smaller_frame 
+    image[height//2: , :width//2]=smaller_frame
+    image[:height//2,width//2:]= smaller_frame 
+    image[height//2:,width//2:]=smaller_frame
+    cv2.imshow('frame',image) 
+    if cv2.waitKey(1)==ord('q'): 
+        break 
+cap.release()  
 cv2.destroyAllWindows()
 
 
 
+
 ## iv) Rotate and display the video
-import cv2
-import numpy as np
-cap = cv2.VideoCapture(0)
-while True:
-    ret, frame = cap.read()
-    width = int(cap.get(3)) 
-    height = int(cap.get(4))
-    image = np.zeros(frame.shape, np.uint8)
-    smaller_frame = cv2.resize(frame, (0,0), fx = 0.5, fy=0.5)
-    image[:height//2, :width//2] = smaller_frame
-    image[:height//2, :width//2] = cv2.rotate(smaller_frame,cv2.cv2.ROTATE_180)
-    cv2.imshow("NewPicture.jpg",image)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-videoCaptureObject.release()
+import cv2 
+import numpy as np 
+cap=cv2.VideoCapture(0) 
+while True: 
+    ret,frame=cap.read()
+    width=int(cap.get(3)) 
+    height=int(cap.get(4)) 
+    image=np.zeros(frame.shape,np.uint8)
+    smaller_frame=cv2.resize(frame,(0,0),fx=0.5,fy=0.5)
+    image[:height//2,:width//2]=image[:height//2, :width//2] = cv2.rotate(smaller_frame,cv2.cv2.ROTATE_180) 
+    image[height//2: , :width//2]=smaller_frame
+    image[:height//2,width//2:]= image[:height//2, :width//2] = cv2.rotate(smaller_frame,cv2.cv2.ROTATE_180) 
+    image[height//2:,width//2:]=smaller_frame
+    cv2.imshow('frame',image) 
+    if cv2.waitKey(1)==ord('q'): 
+        break 
+cap.release()
 cv2.destroyAllWindows()
 
 
@@ -99,22 +106,26 @@ cv2.destroyAllWindows()
 
 ### i) Write the frame as JPG image
 </br>
+![Screenshot (20)](https://user-images.githubusercontent.com/75234588/162612492-3d9db86e-6f28-457b-abd5-af2d60d4ef50.png)
 </br>
 
 
 ### ii) Display the video
 </br>
+![Screenshot (17)](https://user-images.githubusercontent.com/75234588/162612524-ddcd43dd-7989-42d6-96ab-a47f22854ed9.png)
 </br>
 
 
 ### iii) Display the video by resizing the window
 </br>
+![Screenshot (18)](https://user-images.githubusercontent.com/75234588/162612541-bdc6bab0-5109-42f6-925f-5af4528a058d.png)
 </br>
 
 
 
 ### iv) Rotate and display the video
 </br>
+![Screenshot (19)](https://user-images.githubusercontent.com/75234588/162612551-0ea053fb-5665-43ac-a04d-4012cc8a1bba.png)
 </br>
 
 
