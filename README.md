@@ -1,4 +1,6 @@
-# Image-Acquisition-from-Web-Camera
+### EX NO : 02
+### DATE  : 08.04.2022
+# <p align="center">Image-Acquisition-from-Web-Camera</p>
 ## Aim
  
 Aim:
@@ -41,8 +43,6 @@ cv2.imwrite("live.jpg",frame)
 cap.release() 
 cv2.destroyAllWindows()
 
-
-
 ## ii) Display the video
 import cv2 
 import numpy as np 
@@ -54,8 +54,6 @@ while True:
         break 
 cap.release()
 cv2.destroyAllWindows()
-
-
 
 ## iii) Display the video by resizing the window
 import cv2 
@@ -77,9 +75,6 @@ while True:
 cap.release()  
 cv2.destroyAllWindows()
 
-
-
-
 ## iv) Rotate and display the video
 import cv2 
 import numpy as np 
@@ -99,30 +94,41 @@ while True:
         break 
 cap.release()
 cv2.destroyAllWindows()
-
-
 ```
 ## Output
 
 ### i) Write the frame as JPG image
-</br>![Screenshot (20)](https://user-images.githubusercontent.com/75234588/162613622-0f1b4d6e-8784-4a32-908a-5d072feb92b9.png)
-</br>
+![Screenshot (20)](https://user-images.githubusercontent.com/75234588/162613622-0f1b4d6e-8784-4a32-908a-5d072feb92b9.png)
+<br>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ### ii) Display the video
-</br>![Screenshot (17)](https://user-images.githubusercontent.com/75234588/162613630-aead3d8d-a79c-4aba-b749-264362aee83b.png)
-</br>
+![Screenshot (17)](https://user-images.githubusercontent.com/75234588/162613630-aead3d8d-a79c-4aba-b749-264362aee83b.png)
+<br>
 
 
 ### iii) Display the video by resizing the window
-</br>![Screenshot (18)](https://user-images.githubusercontent.com/75234588/162613639-08bb657e-5fb1-40f3-8a8e-b108ee7d3261.png)
-</br>
+<br>![Screenshot (18)](https://user-images.githubusercontent.com/75234588/162613639-08bb657e-5fb1-40f3-8a8e-b108ee7d3261.png)
+<br>
 
+<br>
+<br>
+<br>
+<br>
 
 
 ### iv) Rotate and display the video
-</br>![Screenshot (19)](https://user-images.githubusercontent.com/75234588/162613643-c4c2d884-bbd3-4721-9e59-f8366fe5ff20.png)
-</br>
+<br>![Screenshot (19)](https://user-images.githubusercontent.com/75234588/162613643-c4c2d884-bbd3-4721-9e59-f8366fe5ff20.png)
+<br>
 
 
 
